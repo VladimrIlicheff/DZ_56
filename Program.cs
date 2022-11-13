@@ -54,7 +54,7 @@ void SumMinRow(int[,] array)
     int sumRow = 0;
     for (int i = 0; i < matrix.GetLength(1); i++)
     {
-        minRow += matrix[i,0];
+        minRow += matrix[0,i];
     }
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
