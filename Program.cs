@@ -73,6 +73,6 @@ PrintMatrix(matrix);
 Console.WriteLine();
 Console.WriteLine("- - - - - - - - ");   
 Console.WriteLine();
-SumMinRange(matrix);
+MinSumRange(matrix);
 Console.WriteLine();
 
