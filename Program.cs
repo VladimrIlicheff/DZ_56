@@ -47,32 +47,32 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-void SumMinRow(int[,] array)
+void MinSumRange(int[,] array)
 {
-    int minRow = 0;
-    int minSumRow = 0;
-    int sumRow = 0;
+    int minRange = 0;
+    int minSumRange = 0;
+    int sumRange = 0;
     for (int i = 0; i < matrix.GetLength(1); i++)
     {
-        minRow += matrix[0,i];
+        minRange += matrix[0,i];
     }
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++) sumRow += matrix[i, j];
-        if (sumRow < minRow)
+        for (int j = 0; j < matrix.GetLength(1); j++) sumRange += matrix[i, j];
+        if (sumRange < minRange)
         {
-            minRow = sumRow;
-            minSumRow = i;
+            minRange = sumRange;
+            minSumRange= i;
         }
-        sumRow = 0;
+        sumRange = 0;
     }
-    Console.Write($"{minSumRow + 1} строка");
+    Console.Write($"{minSumRange + 1} строка");
 }
 Console.WriteLine();
 PrintMatrix(matrix);
 Console.WriteLine();
-Console.WriteLine("---------");
+Console.WriteLine("- - - - - - - - ");   
 Console.WriteLine();
-SumMinRow(matrix);
+SumMinRange(matrix);
 Console.WriteLine();
 
